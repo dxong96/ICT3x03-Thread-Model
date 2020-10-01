@@ -389,7 +389,7 @@
               },
               "position": {
                 "x": 898,
-                "y": 391
+                "y": 390
               },
               "angle": 0,
               "id": "c52f86b0-ef07-4c54-bb30-86ea6ab339db",
@@ -404,6 +404,74 @@
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "a622d205-8a0b-4d14-b4a1-f924ae710e6c"
+              },
+              "target": {
+                "id": "5824b549-0c3c-4366-bddf-507978b6371f"
+              },
+              "vertices": [],
+              "id": "bb3f24e1-ee13-4732-a490-2ba013f5730e",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Send OTP token\nrequest",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 12,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "a622d205-8a0b-4d14-b4a1-f924ae710e6c"
+              },
+              "target": {
+                "id": "c52f86b0-ef07-4c54-bb30-86ea6ab339db"
+              },
+              "vertices": [],
+              "id": "dfad6ef2-e881-4424-a3bc-b7083a15979d",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Send Email request",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 13,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
                 }
               }
             }
