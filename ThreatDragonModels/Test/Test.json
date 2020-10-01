@@ -25,6 +25,56 @@
               "id": "a622d205-8a0b-4d14-b4a1-f924ae710e6c",
               "z": 1,
               "hasOpenThreats": false,
+              "threats": [
+                {
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "title": "Cross Site Request Forgery",
+                  "type": "Tampering",
+                  "description": "A malicious website submitting a transfer request to our endpoint to send money to their own account using the logged in user's session cookie.",
+                  "mitigation": "OTP before transfer of money"
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "title": "Man In The Middle Attack",
+                  "type": "Tampering",
+                  "mitigation": "HTTPS enforced for all endpoints",
+                  "description": "An attacker could modify the amount of money to transfer without the user knowing."
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "title": "Ability to prove someone did the action",
+                  "description": "There might be an attacker that is hiding between the user's internet and our server's internet that alters the amount of money submitted to our server's endpoint.",
+                  "mitigation": "Send a confirmation email to user upon making payment with the amount transferred."
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "title": "SQL Injection",
+                  "type": "Information disclosure",
+                  "description": "Data leaks can happen at endpoints with input, for example we have a endpoint that gets an user's balance given email or phone number. The input might be an SQL injection, else there is a potential risk where information more than the balance could be drawn out.",
+                  "mitigation": "Sanitize the input string for SQL injection or XSS"
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "title": "SPAM Requesting",
+                  "description": "An attack on an authentication endpoint could be deadly as depending on implementation it would mean that every request will result an a database call to validate the user.",
+                  "mitigation": "Rate limiting should be done on endpoints."
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "title": "Acting as our website",
+                  "type": "Spoofing",
+                  "description": "A malicious attacker creates a website with similar design and makes user input their credentials.",
+                  "mitigation": "OTP cannot be disabled for logins\n\nShow notice on website notifying them to check the domain before entering credentials."
+                }
+              ],
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasNoOpenThreats isInScope"
@@ -52,6 +102,7 @@
               "z": 2,
               "hasOpenThreats": false,
               "outOfScope": false,
+              "threats": [],
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasNoOpenThreats isInScope"
@@ -100,6 +151,10 @@
                 "id": "a622d205-8a0b-4d14-b4a1-f924ae710e6c"
               },
               "vertices": [
+                {
+                  "x": 642,
+                  "y": 182
+                },
                 {
                   "x": 681,
                   "y": 243
